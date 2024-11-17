@@ -6,11 +6,11 @@ from threading import Thread
 from motor.motor_asyncio import AsyncIOMotorClient
 import asyncio
  
-API_ID = os.environ.get("API_ID","18029060")
-API_HASH = os.environ.get("API_HASH","c7e952440251e33bb5cce566b29f7254")
-BOT_TOKEN = os.environ.get("BOT_TOKEN","7544042257:AAHJjALzFv4FWIP6zF7hLCWKD11d6WuaIKY")
-DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://razibot:razibot@cluster0.daqud.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-BOT_USERNAME = os.environ.get("BOT_USERNAME","THH_Auto_Delete_Bot") # Without @
+API_ID = os.environ.get("API_ID","")
+API_HASH = os.environ.get("API_HASH","")
+BOT_TOKEN = os.environ.get("BOT_TOKEN","")
+DATABASE_URL = os.environ.get("DATABASE_URL","")
+BOT_USERNAME = os.environ.get("BOT_USERNAME","") # Without @
 
 #database
 client = AsyncIOMotorClient(DATABASE_URL)
@@ -30,7 +30,7 @@ bot = Client(
 @bot.on_message(filters.command("thh") & filters.private)
 async def start(_, message):
     button = [[
-        InlineKeyboardButton("🎈 Aᴅᴅ ʏᴏᴜʀ Gʀᴏᴜᴘ 🎈", url=f"http://t.me/ThappyHour"),
+        InlineKeyboardButton("🎈 Aᴅᴅ ʏᴏᴜʀ Gʀᴏᴜᴘ 🎈", url=f""),
         ]]
     await message.reply_text(
         f"**I ᴀᴍ Aᴜᴛᴏ Dᴇʟᴇᴛᴇ Bᴏᴛ, I ᴄᴀɴ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴍᴇssᴀɢᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀғᴛᴇʀ ᴀ ᴄᴇʀᴛᴀɪɴ ᴘᴇʀɪᴏᴅ ᴏғ ᴛɪᴍᴇ.**",
