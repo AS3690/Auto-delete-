@@ -27,7 +27,7 @@ bot = Client(
     sleep_threshold=10
 )
 
-@bot.on_message(filters.command("thh") & filters.private)
+@bot.on_message(filters.command("thewarriorsreal") & filters.private)
 async def start(_, message):
     button = [[
         InlineKeyboardButton("🎈 Aᴅᴅ ʏᴏᴜʀ Gʀᴏᴜᴘ 🎈", url=f""),
@@ -38,7 +38,7 @@ async def start(_, message):
         parse_mode=enums.ParseMode.MARKDOWN
     )
     
-@bot.on_message(filters.command("set_t"))
+@bot.on_message(filters.command("set"))
 async def set_delete_time(_, message):
 
     # Check if the message is from a private chat
